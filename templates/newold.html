@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html class="no-js">
+<!--<![endif]-->
+
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+
+
+  </head>
+  <body>
+
+    <div class="form-wrapper" align="center">
+
+      <nav class="header">
+
+        <h1 class="title"><a href="/blog">BLOG</a></h1>
+        <a href="/post" class="left">New Post</a>
+        <a href="/blog?sort=oldest" class="right">Oldest</a>
+        <a href="/blog?sort=newest" class="right newest">Newest</a>
+
+      </nav>
+      {% block content %}
+      {% endblock %}
+
+    </div>
+
+  </body>
+</html>

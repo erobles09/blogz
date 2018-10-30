@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+      <div class="content content-text wow fadeIn">
+        {% if blogs|length == 0 %}
+        <p>No blogs yet</p>{% else %}
+           
+                    
+        <p><b>Post title</b></p>
+                
+        <p><b>Author</b></p>
+
+        <p><b>Post Body</b></p>
+               
+                    
+        {% for blog in blogs %}
+                
+        <form id= "individual_blog" action="/individual">
+          <input form= "individual_blog" type= "submit" 
+                                
+            class= "link_button" name= "blog_title" 
+                                
+            value= "{{ blog.title }}"/>
+        </form>
+                        
+          <form id= "individual_user" action= "/UserPage">
+            <input form= "individual_user" type= "submit" 
+              class= "link_button" name= "user_link" 
+                value= "{{ blog.owner }}"/>
+        </form>
+                    
+        
+         {{ blog.body }}
+                  
+         
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+      <div class="form-wrapper">
+
+        <h1 class="post-header">New Post</h1>
+
+        <form method='post'>
+          <input type="text" name="title" value='{{blog_title}}' placeholder="Title" pkaceholder="completed"/>
+          <p class="error">{{title_error}}</p><br><br>
+
+          <textarea type="text" name="body" placeholder="Your Blog Text Here"></textarea>{{blog_body}}</textarea>
+          <p class="error">{{body_error}}</p><br>
+          
+          <input type="submit"  class='pure-button pure-button-primary' value="Post"/>
+
+        </form>
+
+      </div>
+{% endblock %}
